@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/SinFizzy/modded-server-manifests/main/schema/manifest.v1.schema.json",
+  "title": "Server manifest, format 1",
+  "description": "Everything a launcher needs to match one hosted server. Unknown fields are allowed so newer optional fields don't break older checks.",
+  "type": "object",
+  "required": ["formatVersion", "server", "mods"],
+  "properties": {
+    "formatVersion": { "const": 1 },
+    "minLauncherVersion": { "type": ["string", "null"], "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "generatedAt": { "type": ["string", "null"], "format": "date-time" },
+    "server": {
+      "type": "object",
+      "required": ["id", "name", "game"],
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "name": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "game": { "$ref": "#/$defs/slug" }
+      }
+    },
+    "game": {
+      "type": ["object", "null"],
+      "properties": {
+        "version": { "type": ["string", "null"] }
+      }
+    },
+    "loader": {
+      "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/modEntry" }]
+    },
+    "mods": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/modEntry" }
+    },
+    "signature": {
+      "description": "Reserved for Ed25519 signing. Must be null until signing is switched on.",
+      "type": "null"
+    }
+  },
+  "$defs": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "modEntry": {
+      "type": "object",
+      "required": ["id", "version", "source", "url", "sha256"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": ["string", "null"] },
+        "version": { "type": "string", "minLength": 1 },
+        "source": { "$ref": "#/$defs/slug" },
+        "url": { "type": "string", "pattern": "^https://[^\\s]+$" },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "sizeBytes": { "type": ["integer", "null"], "minimum": 0 },
+        "updated": { "type": ["string", "null"], "format": "date" },
+        "side": { "enum": ["both", "client", "server"] },
+        "required": { "type": "boolean" }
+      }
+    }
+  }
+}
