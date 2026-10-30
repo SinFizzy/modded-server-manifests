@@ -1,0 +1,38 @@
+{
+  "formatVersion": 1,
+  "minLauncherVersion": null,
+  "generatedAt": "2026-10-30T01:39:16.4559358+00:00",
+  "server": {
+    "id": "test-2",
+    "name": "Test Server 2",
+    "game": "valheim"
+  },
+  "game": null,
+  "loader": {
+    "id": "denikson-BepInExPack_Valheim",
+    "name": "BepInExPack Valheim",
+    "version": "5.4.2351",
+    "source": "thunderstore",
+    "url": "https://thunderstore.io/package/download/denikson/BepInExPack_Valheim/5.4.2351/",
+    "sha256": "bce631497976a93977ceb08e166712e6c31d15244956f89f17df092a9b62e29f",
+    "sizeBytes": 702924,
+    "updated": "2026-09-24",
+    "side": "both",
+    "required": true
+  },
+  "mods": [
+    {
+      "id": "Advize-PlantEasily",
+      "name": "PlantEasily",
+      "version": "2.3.1",
+      "source": "thunderstore",
+      "url": "https://thunderstore.io/package/download/Advize/PlantEasily/2.3.1/",
+      "sha256": "33642b3ff193e220fbe9301ecd0a2a150bf60c551f0fa06cfc03d96bcdc6ffe0",
+      "sizeBytes": 194035,
+      "updated": "2026-10-24",
+      "side": "both",
+      "required": true
+    }
+  ],
+  "signature": null
+}
