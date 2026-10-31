@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "minLauncherVersion": null,
-  "generatedAt": "2026-10-30T01:39:16.4559358+00:00",
+  "generatedAt": "2026-10-31T07:01:26.4885641+00:00",
   "server": {
     "id": "test-2",
     "name": "Test Server 2",
@@ -17,10 +17,24 @@
     "sha256": "bce631497976a93977ceb08e166712e6c31d15244956f89f17df092a9b62e29f",
     "sizeBytes": 702924,
     "updated": "2026-09-24",
+    "added": null,
     "side": "both",
     "required": true
   },
   "mods": [
+    {
+      "id": "Azumatt-AzuClock",
+      "name": "AzuClock",
+      "version": "1.1.0",
+      "source": "thunderstore",
+      "url": "https://thunderstore.io/package/download/Azumatt/AzuClock/1.1.0/",
+      "sha256": "48750172324e9a504196dce7a8f60f37b2b90b262b3f4a34c56ae101f59f2934",
+      "sizeBytes": 70958,
+      "updated": "2026-09-14",
+      "added": "2026-10-31",
+      "side": "client",
+      "required": false
+    },
     {
       "id": "Advize-PlantEasily",
       "name": "PlantEasily",
@@ -30,7 +44,34 @@
       "sha256": "33642b3ff193e220fbe9301ecd0a2a150bf60c551f0fa06cfc03d96bcdc6ffe0",
       "sizeBytes": 194035,
       "updated": "2026-10-24",
+      "added": null,
       "side": "both",
+      "required": true
+    },
+    {
+      "id": "ArgusMagnus-ServersideQoL",
+      "name": "ServersideQoL",
+      "version": "2.5.1",
+      "source": "thunderstore",
+      "url": "https://thunderstore.io/package/download/ArgusMagnus/ServersideQoL/2.5.1/",
+      "sha256": "be3ff833b88fb134bb2bd52163f53ae9be99f98a3f7ede330e8f769b7b759fc8",
+      "sizeBytes": 194590,
+      "updated": "2026-10-27",
+      "added": "2026-10-31",
+      "side": "server",
+      "required": true
+    },
+    {
+      "id": "ValheimModding-YamlDotNet",
+      "name": "YamlDotNet",
+      "version": "16.3.1",
+      "source": "thunderstore",
+      "url": "https://thunderstore.io/package/download/ValheimModding/YamlDotNet/16.3.1/",
+      "sha256": "2280480d2add7d6a7a17b882f9b755145160c852e89a14794d1493d08495d2ac",
+      "sizeBytes": 130222,
+      "updated": "2025-06-15",
+      "added": "2026-10-31",
+      "side": "server",
       "required": true
     }
   ],
